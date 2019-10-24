@@ -1,0 +1,10 @@
+<svg width="480" height="480" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon_black">
+<g id="logo">
+<path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd" d="M380.593 148C350.581 102.229 298.821 72 240 72C147.216 72 72 147.216 72 240C72 332.784 147.216 408 240 408C298.821 408 350.581 377.771 380.593 332H426.599C392.649 400.729 321.845 448 240 448C125.125 448 32 354.875 32 240C32 125.125 125.125 32 240 32C321.845 32 392.649 79.2709 426.599 148L380.593 148Z" fill="black"/>
+<rect id="left" x="148" y="172" width="32" height="160" rx="16" fill="black"/>
+<rect id="center" x="224" y="148" width="32" height="184" rx="16" fill="black"/>
+<rect id="right" x="300" y="172" width="32" height="160" rx="16" fill="black"/>
+</g>
+</g>
+</svg>
