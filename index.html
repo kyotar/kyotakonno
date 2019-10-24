@@ -20,40 +20,95 @@
   <link rel="apple-touch-icon" href="./assets/images/icon.png">
   <link rel="stylesheet" href="./assets/css/ress.min.css" type="text/css">
   <style>
+  /**
+  * Setting
+  */
   @import url(https://fonts.googleapis.com/css?family=Raleway:200);
+
+  :root {
+    --color_bg: #F0FCFD;
+    --color_black: #000;
+    --color_black05: rgba(0, 0, 0, .5);
+  }
+
+
+  /**
+  * Reset
+  */
+  li { list-style: none; }
+  a, a:link, a:visited, a:hover { text-decoration: none; }
+
+
+  /**
+  * Layout
+  */
   body {
-    background-color: #fff; color: #000;
+    background-color: var(--color_bg);
+    color: var(--color_black);
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-    text-align: center; padding: 40px 20px;
+    text-align: center; padding: 40px 16px;
   }
   header, main, footer { width: 320px; margin: 0 auto; }
-  h1 { font-family: 'Raleway', sans-serif; font-size: 48px; }
-  p, li { font-size: 16px; }
-  li { text-align: left; line-height: 1.5em; }
-  figure { margin: 0; }
-  figure .icon { width: 80px; height: 80px; }
-  footer small { font-size: 10px; }
-  a, a:link, a:visited, a:hover { text-decoration: none; }
-  a { color: #0493a3; }
-  a:hover { background: rgba(4, 147, 163, 0.1); }
+  header figure img { width: 80px; height: 80px; }
+  header h1 { font-family: 'Raleway', sans-serif; color: var(--color_black); font-size: 48px; margin: 40px 0;}
+  main p { font-size: 16px; }
+  main ul { display: flex; justify-content: space-around; margin: 40px 0;}
+  main ul li img { width: 64px; border-radius: 50%; }
+  footer small { font-size: 12px; color: var(--color_black05); }
+
+  /**
+  * Animation
+  */
+  #b_left { animation: jump 1s 1s ease-in infinite; }
+  #b_center { animation: jump 1s 1.2s ease-in infinite; }
+  #b_right { animation: jump 1s 1.3s ease-in infinite; }
+  @keyframes jump {
+  0% {
+     transform: translateY(0);
+     animation-timing-function: ease-in;
+  }
+  5% {
+     transform: translateY(4px);
+     animation-timing-function: ease-out;
+  }
+  25% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: translateY(4px);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    }
+  }
   </style>
 </head>
 <body>
   <header>
     <figure>
-      <img src="./assets/images/icon.svg" alt="KYOTA KONNO" class="icon">
+      <svg width="80" height="80" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="icon">
+          <path id="c_type" fill-rule="evenodd" clip-rule="evenodd" d="M380.593 148C350.581 102.229 298.821 72 240 72C147.216 72 72 147.216 72 240C72 332.784 147.216 408 240 408C298.821 408 350.581 377.771 380.593 332H426.599C392.649 400.729 321.845 448 240 448C125.125 448 32 354.875 32 240C32 125.125 125.125 32 240 32C321.845 32 392.649 79.2709 426.599 148L380.593 148Z" fill="black"/>
+          <rect id="b_left" x="148" y="172" width="32" height="160" rx="16" fill="black"/>
+          <rect id="b_center" x="224" y="148" width="32" height="184" rx="16" fill="black"/>
+          <rect id="b_right" x="300" y="172" width="32" height="160" rx="16" fill="black"/>
+        </g>
+      </svg>
     </figure>
     <h1>KYOTA KONNO</h1>
   </header>
 
   <main>
-    <p>Designer</p>
+    <p>Designer / Frontend Engineer</p>
     <ul>
-      <li><a href="https://note.mu/kyota" target="_blank">note</a></li>
-      <li><a href="https://qiita.com/kyota" target="_blank">Qiita</a></li>
-      <li><a href="https://twitter.com/kyota" target="_blank">Twitter</a></li>
-      <li><a href="https://uxraying.com/" target="_blank">UXRAYING</a></li>
-      <li><a href="https://www.slideshare.net/konnokyota" target="_blank">Slide Share</a></li>
+      <li><a href="https://twitter.com/kyota" target="_blank"><img src="./assets/images/icon_twitter.png" alt="twitter"></a></li>
+      <li><a href="https://note.mu/kyota" target="_blank"><img src="./assets/images/icon_note.png" alt="note"></a></li>
+      <li><a href="https://qiita.com/kyota" target="_blank"><img src="./assets/images/icon_qiita.png" alt="qiita"></a></li>
     </ul>
   </main>
 
